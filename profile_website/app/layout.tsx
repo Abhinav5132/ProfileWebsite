@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-full flex flex-col">
         <Titlebar></Titlebar>
-        {children}
+         {children}  
       </body>
     </html>
   );

@@ -19,14 +19,21 @@
   :root {
     --background: #1E1E1E;
     --foreground: #ededed;
-    --tertiary: #3B3636;
+    --tertiary: #3b363600;
     --primary: #1E1E1E;
     --secondary: #D27B25;
   }
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(ellipse at center, #1a2a6c 10%, #0a0a1a 100%);
+  animation: bgShift 8s ease-in-out infinite alternate;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Animation dosent work fix later.*/
+@keyframes bgShift {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }

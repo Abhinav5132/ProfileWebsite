@@ -1,5 +1,9 @@
 import { redirect } from "next/navigation";
-import Image from "next/image";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 export default function page(){
   redirect("/home");
@@ -11,7 +15,6 @@ export function Titlebar() {
     <div className=" flex flex-row bg-tertiary max-h-16 items-center 
     justify-between z-1000 fixed top-0 right-0 left-0">
       <div className="flex flex-row">
-        {/*<Image src={""} alt={""} />*/}
         <div className="p-4">
           Go to all projects 
         </div>
