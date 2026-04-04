@@ -5,6 +5,7 @@ import { Projects } from "@/components/Projects";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap/all";
+import { start } from "repl";
 
 export default function Home() {
     
@@ -62,7 +63,9 @@ export default function Home() {
         <p className="subheader"> Fullstack Software Developer </p>
       </div>
     </div >
-    <Projects projects={projects} />
+    <section id="projects">
+      <Projects projects={projects} />
+    </section>
   </>
   );
 }
