@@ -10,10 +10,9 @@ export default function page(){
 }
 
 export function Titlebar() {
-
   return (
     <div className=" flex flex-row bg-tertiary max-h-16 items-center 
-    justify-between z-1000 fixed top-0 right-0 left-0">
+    justify-between z-1000 fixed top-0 right-0 left-0 topDiv">
       <div className="flex flex-row">
         <div className="p-4">
           Go to all projects 

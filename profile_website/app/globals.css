@@ -25,8 +25,15 @@
   }
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   background: radial-gradient(ellipse at center, #1a2a6c 10%, #0a0a1a 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 150% 150%;
   animation: bgShift 8s ease-in-out infinite alternate;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
