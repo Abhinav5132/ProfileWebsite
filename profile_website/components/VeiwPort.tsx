@@ -17,7 +17,7 @@ export default function VeiwPort() {
         mount.appendChild(renderer.domElement);
 
         const camera = new THREE.PerspectiveCamera(75, w/h, 0.1, 10);
-        camera.position.z = 2;
+        camera.position.z = 10;
 
         const scene = new THREE.Scene();
         renderer.render(scene, camera);
@@ -64,10 +64,8 @@ export default function VeiwPort() {
         const animate = () => {
             animId = requestAnimationFrame(animate);
 
-            smoothMouse.current.x += (mouse.current.x - smoothMouse.current.x) * 0.05;
-            smoothMouse.current.y += (mouse.current.y - smoothMouse.current.y) * 0.05;
-
-            // pivot camera around center
+            smoothMouse.current.x += (mouse.current.x - smoothMouse.current.x) * 0.03;
+            smoothMouse.current.y += (mouse.current.y - smoothMouse.current.y) * 0.03;
             camera.position.x = -Math.sin(smoothMouse.current.x * 0.5) * 2;
             camera.position.y = -smoothMouse.current.y * 0.5;
             camera.lookAt(0, 0, 0);
